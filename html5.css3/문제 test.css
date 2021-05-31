@@ -13,6 +13,6 @@ aside a:nth-child(4) > a { border: 1px solid red; }
 
 /* 5. 46~74 라인의 두번째 <ul>태그(61~72라인)에서 세번째 <li>을 선택하는 선택자를 작성하시오(형태 구조 선택자 필수)*/
 ul:last-of-type > li:nth-of-type(3) { border: 1px solid red; }
-다시
+
 /* 6. 73 라인의 <p>태그에 마우스를 올렸을때의 선택자를 작성하시오*/
 p:hover { border: 1px solid red; }
