@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cgv_wrap">
+        <div class="cgv_ad" id="cgv_firtst_ad"></div>
+        <div id="header">
+            <div class="head">
+                <h1><a href="https://www.cgv.co.kr/"><img src="https://img.cgv.co.kr/R2014/images/title/h1_cgv.png" alt="CGV"></a></h1>
+                <div class="service">
+                    <ul class="sns">
+                        <li>CGV APP</li>
+                        <li>like</li>
+                        <li>follow</li>
+                        <li>알뜰한 영화관람법</li>
+                    </ul>
+                    <ul class="log">
+                        <li>로그인</li>
+                        <li>회원가입</li>
+                        <li>MyCGV</li>
+                        <li>VIP LOUNGE</li>
+                        <li>Club서비스</li>
+                        <li>고객센터</li>
+                        <li>ENGLISH TICKTING</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="contaniner">
+            <div id="navline" class="linemap">
+                <div class="line1">
+                    <ul>
+                        <li>홈</li>
+                        <li>영화</li>
+                        <li>무비파인더</li>
+                    </ul>
+                </div>
+                <div class="line2">
+                    <ul>
+                        <li>VIP LOUNGE</li>
+                        <li>CLUB 서비스</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="box">
+                    <div class="box_finder">
+                        <h3>좋아하는 영화, 찾고싶은 영화를 CGV에서 찾아드립니다!</h3>
+                        <form id="movie_search_box">
+                            <table>
+                                <tr>
+                                    <th>영화검색</th>
+                                    <td>
+                                        <select>
+                                            <option value>전체</option>
+                                            <option>영화배우</option>
+                                            <option>주연배우</option>
+                                            <option>감독</option>
+                                        </select>
+                                        <input type="text" placeholder="키워드를 입력해 주세요" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>장르</th>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                <label for="all_genre">전체</label>
+                                                <input type="checkbox" name="all_genre" />
+                                            </li>
+                                            <li>
+                                                <label for="family">가족</label>
+                                                <input type="checkbox" name="family" />
+                                            </li>
+                                            <li>
+                                                <label for="noir">느와르</label>
+                                                <input type="checkbox" name="noir" />
+                                            </li>
+                                            <li>
+                                                <label for="mistery">미스터리</label>
+                                                <input type="checkbox" name="mistery" />
+                                            </li>
+                                            <li>
+                                                <label for="child">아동</label>
+                                                <input type="checkbox" name="child" />
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>제작국가</th>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                <label for="all_country">전체</label>
+                                                <input type="checkbox" name="all_country" />
+                                            </li>
+                                            <li>
+                                                <label for="ko">한국</label>
+                                                <input type="checkbox" name="ko" />
+                                            </li>
+                                            <li>
+                                                <label for="amr">미국</label>
+                                                <input type="checkbox" name="amr" />
+                                            </li>
+                                            <li>
+                                                <label for="ja">일본</label>
+                                                <input type="checkbox" name="ja" />
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>관람등급</th>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                <label for="all_age">전체</label>
+                                                <input type="checkbox" name="all_age" />
+                                            </li>
+                                            <li>
+                                                <label for="ko">전체관람가</label>
+                                                <input type="checkbox" name="ko" />
+                                            </li>
+                                            <li>
+                                                <label for="twel">12세 관람가</label>
+                                                <input type="checkbox" name="twel" />
+                                            </li>
+                                            <li>
+                                                <label for="fif">15세 관람가</label>
+                                                <input type="checkbox" name="fif" />
+                                            </li>
+                                            <li>
+                                                <label for="nin">청소년 관람불가</label>
+                                                <input type="checkbox" name="nin" />
+                                            </li>
+                                            <li>
+                                                <label for="mj">미정</label>
+                                                <input type="checkbox" name="mj" />
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="wrap_submit">
+                                <button type="submit">검색</button>
+                                <button type="submit">제출</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="movie_chart">
+                    <div class="title">
+                        <h3>무비차트</h3>
+                        <div class="submenu">
+                            <ul>
+                                <li>무비차트</li>
+                                <li>상영예정작</li>
+                                <li>CGV아트하우스</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="submenu2">
+                        <div class="now_show">
+                            <input type="checkbox" id="now_show_chk" checked />
+                            <label for="now_show_chk">현재 상영작만 보기</label>
+                        </div>
+                        <select id="order_type">
+                            <option value>예매율순</option>
+                            <option>평점순</option>
+                            <option>관람객순</option>
+                        </select>
+                        <button type="button">GO</button>
+                    </div>
+                    <div class="movie_chartimg">
+                        <ol>
+                            <li>크루엘라</li>
+                            <li>분노의 질주-더 얼티메이트</li>
+                            <li>프로페서 앤 매드맨</li>
+                            <li>굴뚝마을의 푸펠</li>
+                            <li>극장판 귀멸의 칼날-무한열차편</li>
+                            <li>파이프라인</li>
+                            <li>보이저스</li>
+                        </ol>
+                    </div>
+                    <div class="chartad"></div>
+                    <div class="rank_trailer">
+                        <div class="video"><h3>인기 트레일러</h3></div>
+                        <div class="rank">
+                            <h3>실시간 인기 검색어</h3>
+                            <ol>
+                                <li>부활</li>
+                                <li>강철비2 정상회담</li>
+                                <li>반도</li>
+                                <li>살아있다</li>
+                                <li>코난</li>
+                                <li>알라딘</li>
+                                <li>팬데믹</li>
+                                <li>해리포터</li>
+                                <li>뱅드림</li>
+                                <li>명탐정코난</li>
+                            </ol>
+                            <p class="date">2020.07.26기준</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="bottom_wrapper" class="seonho_ad"></div>
+            <div class="foot">
+                <ul>
+                    <li>4DX</li>
+                    <li>IMAX</li>
+                    <li>SCREEN X</li>
+                    <li>SPHEREX</LI>
+                    <li>GOLD CLASS</li>
+                    <li>CINE DE CHEF</li>
+                    <li>THE PRIVATECINEMA</li>
+                    <li>CINE KIDS</li>
+                    <li>CINE&FORET</li>
+                </ul>
+            </div>
+            <div class="last">
+                <div class="policy">
+                    <ul>
+                        <li>회사소개</li>
+                        <li>IR</li>
+                        <li>채용정보</li>
+                        <li>광고/프로모션문의</li>
+                        <li>제휴문의</li>
+                        <li>출점문의</li>
+                        <li>이용약관</li>
+                        <li>편성기준</li>
+                        <li>개인정보처리방침</li>
+                        <li>법적고지</li>
+                        <li>이메일주소무단수집거부</li>
+                        <li>윤리경영</li>
+                        <li>사이버감사실</li>
+                        <li>사이트맵</li>
+                    </ul>
+                </div>
+                <div class="address">
+                    <address>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</address>
+                    <p class="sec">
+                        <span>대표이사 : 허민회</span>
+                        <span>사업자등록번호 : 104-81-45690</span>
+                        <span>통신판매업신고번호 : 2017-서울용산-0662</span>
+                    </p>
+                    <p class="thr">
+                        <span>호스팅사업자 : CJ올리브네트웍스</span>
+                        <span>개인정보보호 책임자 : 심준법</span>
+                        <span>대표이메일 : cjcfvmaster@cj.net</span>
+                        <span>CGV고객센터 : 1544-1122</span>
+                    </p>   
+                </div>
+                <div class="familysite">
+                    <label for="familysite"></label>
+                    <select id="familysite">
+                        <option value>계열사 바로가기</option>
+                        <optgroup label="CJ그룹">
+                            <option>CJ주식회사</option>
+                        </optgroup>
+                        <optgroup label="식품 & 식품서비스">
+                            <option>CJ제일제당</option>
+                            <option>CJ푸드빌</option>
+                            <option>CJ프레시웨이</option>
+                        </optgroup>
+                        <optgroup label="생명공학">
+                            <option>CJ제일제당 BIO사업부문</option>
+                            <option>CJ Feed&Card</option>
+                        </optgroup>
+                        <optgroup label="물류 & 신유통">
+                            <option>CJ대한통운</option>
+                            <option>CJ대한통운 건설부문</option>
+                            <option>CJ올리브영</option>
+                            <option>CJ올리브네트웍스</option>
+                            <option>CJ ENM 커머스부문</option>
+                        </optgroup>
+                        <optgroup label="엔터테인먼트 & 미디어">
+                            <option>CJ ENM 엔터테인먼트부문</option>
+                            <option>CJ CGV</option>
+                            <option>CJ파워캐스트</option>
+                        </optgroup>
+                    </select>
+                    <button type="button">GO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+            
