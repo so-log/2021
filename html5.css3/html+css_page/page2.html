@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>샤롯데씨어터</title>
+    <!-- 폰트설정 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Train+One&display=swap" rel="stylesheet">
+    <!-- 초기화 -->
+    <style>
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Times New Roman', serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+        img { border: 0; }
+    </style>
+    <!-- 헤더 -->
+    <style>
+        /* 중앙정렬 */
+        header { 
+            width: 960px; margin: 0 auto;
+            height: 150px;
+            position: relative;
+            }
+        header > #title {
+        position: absolute;
+        left: 0px; 
+        padding: 10px;
+        font-family: 'Train One', cursive;
+        text-align: center;
+        background: red;
+        }
+        header > #menu { 
+            position: relative;
+            font-family: 'Noto Sans KR', sans-serif; 
+        }
+    </style>
+    <!-- 네비(1) -->
+    <style>
+        #top_gnb > ul { 
+            overflow: hidden;
+            position: absolute; 
+            left: 200px; top: 15px;
+        }
+        #top_gnb > ul > li { float: left; }
+        #top_gnb > ul > li > a {
+            display: block;
+            padding: 5px;
+            margin-right: 30px;
+        }
+        /* 선택시 색변화 */
+        #top_gnb > ul > li > a:hover {
+            background: white;
+            color: red;
+        }
+        /* 로그인 */
+        #login > ul { overflow: hidden; }
+        #login > ul > li { float: right; }
+        #login > ul > li > a {
+            display: block;
+            padding: 5px;
+            margin-right: 7px;
+            }
+    </style>
+    <!-- 네비(2) -->
+    <style>
+        #bottom_gnb {
+        position: absolute;
+        /* 질문? 수평정렬table div태그만? li가능? */
+        display: table;
+        left: 175px; top: 53px;
+        width: 900px;
+        border-bottom: 1px solid gainsboro;
+        border-top: 1px solid gainsboro;
+        }
+
+        #bottom_gnb > ul > li {
+            display: table-cell;
+            position: relative;
+        }
+
+        #bottom_gnb > ul > li > a {
+            /* 사이간격 */
+            margin-right: 10px;
+            margin-left: 20px;
+            /* 수평정렬 */
+            height: 35px;
+            line-height: 35px;
+        }
+        /* 사이선 */
+        #bottom_gnb > ul > li > a::before {
+            display: block;
+            position: absolute;
+            margin-top: 7px;
+            width: 1px; height: 20px;
+            border-left: 1px solid gainsboro;
+            content: '';
+        }
+        /* 선택시 색 변화 */
+        #bottom_gnb > ul > li > a:hover {
+            background: white;
+            color: red;
+        }
+    </style>
+    <!-- 소개글 -->
+    <style>
+        #content { 
+            width: 90%;
+            overflow: hidden;
+            font-family: 'Noto Sans KR', sans-serif; }
+        #content > #letter {
+            float: left;
+            padding: 10px;
+            margin-left: 200px;
+        }
+        #content > #letter > #letter_title {
+            display: block;
+            margin-bottom: 30px;
+        }
+        #content > #letter > #letter_lotte > p {
+            display: block;
+            margin-bottom: 30px;
+        }
+    </style>
+    <!-- 사이드 -->
+    <style>
+        /* 수평정렬 */
+        #content > #img { 
+            float: right;
+            margin-top: 80px;
+            display: table; }
+        #img > div > li { 
+            display: table-cell; 
+            padding-right: 10px;
+        }
+    </style>
+    <!-- 푸터 -->
+    <style>
+        footer {
+            font-family: 'Noto Sans KR', sans-serif;
+            position: relative;
+            height: 90px;
+            width: 100%;
+            background: #333333;
+        }
+
+        footer > div {
+            position: absolute;
+            padding: 25px;
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>charlotte</h1>
+            <p>theater</p>
+        </div>
+        <div id="menu">
+            <nav id="top_gnb">
+                <ul>
+                    <li><a href="#">샤롯데씨어터</a></li>
+                    <li><a href="#">공연</a></li>
+                    <li><a href="#">티켓예매</a></li>
+                    <li><a href="#">상품패키지</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </nav>
+            <nav id="bottom_gnb">
+                <ul>
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">시설 안내</a></li>
+                    <li><a href="#">특별 서비스</a></li>
+                    <li><a href="#">대관 안내</a></li>
+                    <li><a href="#">좌석 배치도</a></li>
+                    <li><a href="#">채용 공고</a></li>
+                    <li><a href="#">제휴 할인</a></li>
+                    <li><a href="#">오시는 길</a></li>
+                </ul>
+            </nav>
+            <div id="login">
+                <ul>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <section id="letter">
+            <div id="letter_title">
+                <h1>소개</h1><br />
+                <h3>대한민국 최초이자 최고의 뮤지컬 전용 극장 샤롯데씨어터</h3>
+            </div>
+            <div id="letter_lotte">
+                <p>1,230석 규모의 대한민국 최초이자 최고의 뮤지컬 전용 극장 샤롯데씨어터는 <br />
+                    롯데 그룹이 한국의 뮤지컬 업계 발전을 도모하기 위해 건설비 총 450억 원을 <br />
+                    투자하여 지난 2004년 착공, 2006년 10월 28일 개관하였습니다.</p>
+                <p>1995년 500억 공연시장 규모가 급성장하여 매년 수 천억 원 규모의 매출을 <br />
+                    올리고 있습니다. 그 중 60% 이상을 뮤지컬이 차지할 정도로, 이제 뮤지컬은 많은<br />
+                    이들에게 각광 받는 대중문화의 한 영역이 되었습니다.</p>
+                <p>그러나, 국내에서는 몇몇 대형 공연장이 뮤지컬 공연장으로 활용될 뿐, 뮤지컬만의<br />
+                    특성을 잘 살릴 수 있는 전용 극장은 없었습니다.</p>
+                <p>이러한 열악한 환경에서 탄생한 뮤지컬 전용 극장인 샤롯데씨어터는 선진국에 비해<br />
+                    열세인 공연 관련 산업 부흥과 국내공연 산업의 질적 향상에 기여할 것으로 기대하고<br />
+                    있습니다. 본 극장은 그룹의 문화 사업을 통한 사회환원이란 이념으로 국내 최고<br />
+                    수준의 장비와 시설을 갖추었으며, 수준 높고 다양한 뮤지컬을 한국 관객에게<br />
+                    지속적으로 제공하여 공연 시장 확대와 문화 발전에 기여해 나갈 것입니다.</p>
+            </div>
+        </section>
+        <aside id="img">
+            <img src="1.jpeg">
+            <div>
+                <li><img src="2.jpeg"></li>
+                <li><img src="3.jpeg"></li>
+                <li><img src="4.jpeg"></li>
+                <li><img src="5.jpeg"></li>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <div>
+            <h5>회원약관개인정보취급방침사이트맵</h5>
+            <h5>서울특별시 송파구 올림픽로 240 (잠실동) 롯데쇼핑 ㈜ 롯데시네마 샤롯데씨어터 대표이사 기원규사업자등록번호 215-85-39690개인정보관리 책임자 부문장 김무성</h5>
+        </div>
+    </footer>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>샤롯데씨어터</title>
+    <!-- 폰트설정 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Train+One&display=swap" rel="stylesheet">
+    <!-- 초기화 -->
+    <style>
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Times New Roman', serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+        img { border: 0; }
+    </style>
+    <!-- 헤더 -->
+    <style>
+        /* 중앙정렬 */
+        #main_header { 
+            width: 960px; margin: 0 auto;
+            height: 200px;
+            position: relative;
+            }
+        
+        #main_header > #parking {
+            position: absolute;
+            left: 0; top: 0;
+        }
+        /* 질문? 타이틀 위치 더 왼쪽으로 */
+        #main_header > #title {
+            position: absolute;
+            /* top은 주차이미지에 따라서 */
+            left: 0px; top: 120px;
+            padding: 10px;
+            font-family: 'Train One', cursive;
+            text-align: center;
+            background: red;
+        }
+        #main_header > #gnb {
+            position: absolute;
+            left: 170px; top: 100px;
+            margin-top: 50px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        #main_header > #login {
+            position: absolute;
+            right: 60px; top: 120px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+    <!-- 메뉴(1) -->
+    <style>
+        #gnb > ul { overflow: hidden; }
+        #gnb > ul > li { float: left; }
+        #gnb > ul > li > a {
+            display: block;
+            padding: 10px 20px;
+        }
+        /* 선택시 색변화 */
+        #gnb > ul > li > a:hover {
+            background: white;
+            color: red;
+        }
+    </style>
+    <!-- 메뉴(2) -->
+    <style>
+        #login > ul {overflow: hidden;}
+        #login > ul > li {float: left;}
+        #login > ul > li > a {
+            display: block;
+            padding: 2px 10px;
+        }
+    </style>
+    <!-- 콘텐츠 -->
+    <style>
+        #content {
+            width: 960px; margin: 0 auto;
+            height: 900px;
+            font-family: 'Noto Sans KR', sans-serif;
+            display: block;
+            position: relative;
+        }
+    </style>
+    <!-- 배너 -->
+    <style>
+        #notice {
+            position: absolute;
+            left: 5px;
+            padding: 5px;
+        }
+        /* 질문? 표 사이사이 공간 */
+        #banner_notice > .bottom {
+            border: 1px solid gainsboro;
+            padding: 5px;
+            width: 500px;
+        }
+        /* 질문? 버튼 위 공간 */
+        /* 수평정렬 */
+        #notice > #banner_notice { 
+            display: table; 
+        }
+        #notice > #banner_notice > .bottom { display: table-cell; }
+        /* table이용해보기 float해보기 */
+        /* #content > #notice > .banner_notice { overflow: hidden; }
+        #content > #notice > .banner_notice > .bottom { float: left; } */
+    </style>
+    <!-- 마리앙투아네트 -->
+    <style>
+        #content > #main_wrap { 
+            padding: 50px 250px; 
+        }
+    </style>
+    <!-- 배너(1) -->
+    <!-- 질문? 왜 버튼,, 4개 중 하나만 선택 가능? -->
+    <style>
+        /* 첫번째 버튼 */
+        #first_banner > input:nth-of-type(1) ~ div > ul > #lpac { display: none; }
+        #first_banner > input:nth-of-type(1):checked ~ div > ul > #lpac { display: block;}
+
+        /* 두번째 버튼 */
+        #first_banner > input:nth-of-type(2) ~ div > ul > #sale { display: none; }
+        #first_banner > input:nth-of-type(2):checked ~ div > ul > #sale { display: block;}
+    </style>
+    <!-- 배너(2) -->
+    <style>
+        /* 첫번째 버튼 */
+        #secend_banner > input:nth-of-type(1) ~ div > ul > #marie { display: none; }
+        #secend_banner > input:nth-of-type(1):checked ~ div > ul > #marie { display: block;}
+
+        /* 두번째 버튼 */
+        #secend_banner > input:nth-of-type(2) ~ div > ul > #show { display: none; }
+        #secend_banner > input:nth-of-type(2):checked ~ div > ul > #show { display: block;}
+    </style>
+    </style>
+    <!-- 배너(3) -->
+    <style>
+        /* 수평정렬 */
+        #last_banner { overflow: hidden;}
+        /* 질문? notice옆으로 한줄 만들기 */
+        #last_banner > #notice_banner { 
+            float: left;
+            border-bottom: 2px dotted gainsboro;
+        }
+        #last_banner > ul > li { 
+            float: left; 
+            padding: 5px;
+            }
+        /* 질문? 가운데만 점선 */
+        #last_banner > ul > li > a::before {
+            display: block;
+            position: absolute;
+            width: 1px; height: 50px;
+            border-left: 2px dotted gainsboro;
+            content: '';
+        }
+    </style>
+    <!-- 푸터 -->
+    <style>
+        footer {
+            font-family: 'Noto Sans KR', sans-serif;
+            position: relative;
+            height: 90px;
+            width: 100%;
+            background: #333333;
+        }
+
+        footer > div { 
+            position: absolute;
+            padding: 25px;
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <div id="parking">
+            <img src="parking.png" alt="이미지없음">
+        </div>
+        <div id="title">
+            <h1>charlotte</h1>
+            <p>theater</p>
+        </div>
+        <nav id="gnb">
+            <ul>
+                <li><a href="#">샤롯데씨어터</a></li>
+                <li><a href="#">공연</a></li>
+                <li><a href="#">티켓예매</a></li>
+                <li><a href="#">상품패키지</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </nav>
+        <div id="login">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="content">
+        <section id="main_wrap">
+            <img src="marie.JPG">
+        </section>
+        <section id="notice">
+            <!-- 질문? 클래스 아이디 넣을 때 구분 --> 
+            <ul id="banner_notice">
+                <li id="first_banner" class="bottom">
+                    <input id="first" type="radio" name="tab" checked />
+                    <input id="secend" type="radio" name="tab" />
+                    <div class="tab_item">
+                        <ul>
+                            <li id="lpac">
+                                <a href="#">샤롯데 L패키지</a>
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="button">
+                                    <button type="button">상세 정보 ></button>
+                                </div>
+                            </li>
+                            <li id="sale">
+                                <a href="#">샤롯데 L패키지 특별 타임세일</a>
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x45" />
+                                </div>
+                                <div class="button">
+                                <button type="button">상세 정보 ></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="secend_banner" class="bottom">
+                    <input id="third" type="radio" name="tab" checked />
+                    <input id="fourth" type="radio" name="tab" />
+                    <div class="tab_item">
+                        <ul>
+                            <li id="marie">
+                                <a href="#">
+                                    마리앙투아네트
+                                    <!-- 이미지추가 -->
+                                </a>
+                            </li>
+                            <li id="show">
+                                <a href="#">
+                                    모두가 안전한 공연 관람 안내
+                                    <!-- 이미지추가 -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="last_banner" class="bottom">
+                    <div id="notice_banner">
+                        <h3>Notice</h3>
+                        <ul class="last_notice">
+                            <li><a href="#">뮤지컬<마리 앙투아네트>1차 티켓 오픈 안내</a></li>
+                            <li><a href="#">뮤지컬<팬텀>마지막 티켓 오픈 안내</a></li>
+                        </ul>
+                    </div>
+                    <ul>
+                        <li><a href="#">티켓 예매</a></li>
+                        <li><a href="#">대관 안내</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                        <li><a href="#">채용 공고</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <div>
+            <h5>회원약관개인정보취급방침사이트맵</h5>
+            <h5>서울특별시 송파구 올림픽로 240 (잠실동) 롯데쇼핑 ㈜ 롯데시네마 샤롯데씨어터 대표이사 기원규사업자등록번호 215-85-39690개인정보관리 책임자 부문장 김무성</h5>
+        </div>
+    </footer>
+</body>
+</html>
