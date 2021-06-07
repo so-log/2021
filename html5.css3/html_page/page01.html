@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 초기화 -->
+    <style>
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Times New Roman', serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+        img { border: 0; }
+    </style>
+    <!-- 메뉴(1) -->
+    <style>
+    header { width: 100px; }
+    /* 수평정렬 */
+    #small > #sns { overflow: hidde;; }
+    #small > #sns > li { 
+        float: left; 
+        margin-left: 5px;  
+    }
+
+    #small { 
+        position: relative;
+        height: 20px;
+        width: 1200px;
+        background: seashell;
+    }
+    #small > #log { 
+        overflow: hidden; 
+        position: absolute;
+        left: 600px;
+    }
+    #small > #log > li { 
+        float: left; 
+        margin-left: 5px;
+    }
+    </style>
+    <!-- 메뉴(2) -->
+    <style>
+    #gnb { 
+        width: 960px; margin: 0 auto;
+        height: 200px;
+        position: relative;
+    }
+    </style>
+    <!-- 광고 -->
+    <style></style>
+    <!-- 예고편 -->
+    <style></style>
+    <!-- 이벤트 -->
+    <style></style>
+    <!-- 푸터 -->
+    <style></style>
+</head>
+<body>
+    <header>
+        <div id="small">
+            <ul id="sns">
+                <li><a href="#">CGV APP</a></li>
+                <li><a href="#">like</a></li>
+                <li><a href="#">follow</a></li>
+                <li><a href="#">알뜰한 영화관람법</a></li>
+            </ul>
+            <ul id="log">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">MyCGV</a></li>
+                <li><a href="#">VIP LOUNGE</a></li>
+                <li><a href="#">Club서비스</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">ENGLISH TICKTING</a></li>
+            </ul>
+        </div>
+        <div id="gnb">
+            <h1><a href="https://www.cgv.co.kr/"><img src="https://img.cgv.co.kr/R2014/images/title/h1_cgv.png" alt="CGV"></a></h1>
+            <h2>CULTUREPLEX</h2>
+            <div id="main_gnb"    
+                <ul>
+                    <li><a href="#">영화</a></li>
+                    <li><a href="#">예매</a></li>
+                    <li><a href="#">극장</a></li>
+                    <li><a href="#">이벤트&컬쳐</a></li>
+                </ul>
+            </div>
+            <div id="search">
+                <input type="text" placeholder="분노의질주 예매" />
+                <button type="button">검색</button>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <section id="wrap"></section>
+        <section id="vidie"></section>
+        <section id="event"></section>
+    </div>
+    <footer>
+        <div id="line"></div>
+        <div id="info"></div>
+    </footer>
+</body>
+</html>
