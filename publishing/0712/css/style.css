@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/* 공통 */
+* {
+    box-sizing: border-box;
+    color: black;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+html {
+    font-size: 13px;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.layout_width {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 사이트 상단 메뉴 */
+header {
+    min-height: 182px;
+    background-color: #ff7c98;
+}
+.logo_search .box {
+    width: calc(100% / 3);
+    float: left;
+}
+
+.logo_search .inner::after {
+    clear: left;
+    content: '';
+    display: block;
+}
+
+.logo_search .sns_icon {
+    padding: 40px 0;
+}
+
+.logo_search .sns_icon a {
+    margin-left: 5px;
+}
+
+.logo_search .logo {
+    text-align: center;
+    padding: 21px 0;
+}
+
+.logo_search .search {
+    padding: 26px 0;
+    text-align: right;
+}
+
+.logo_search .login {
+    width: calc(100% - 70px);
+}
+
+.logo_search .login a {
+    color: white;
+    margin-right: 10px;
+}
+
+/* 메뉴 */
+nav ul li {
+    float: left;
+    width: calc((100% - 35px) / 6);
+    text-align: center;
+    font-weight: 700;
+}
+
+nav ul::after {
+    clear: left;
+    content: '';
+    display: block;
+}
+
+nav li a {
+    display: block;
+    font-size: 1.2rem;
+    /* color: white; */
+}
+
+/* 메인베너 */
+.main_banner {
+    margin-bottom: 70px;
+}
+
+.main_banner .swiper-slide {
+    height: 697px;
+}
+
+.main_banner .swiper-wrapper .swiper-slide:nth-child(1) {
+    background: url(../img/banner1.jpeg) no-repeat center center;
+}
+
+.main_banner .swiper-wrapper .swiper-slide:nth-child(2) {
+    background: url(../img/banner2.png) no-repeat center center;
+}
+
+.main_banner .swiper-wrapper .swiper-slide:nth-child(3) {
+    background: url(../img/banner3.png) no-repeat center center;
+}
+
+.main_banner .swiper-wrapper .swiper-slide:nth-child(4) {
+    background: url(../img/banner4.jpeg) no-repeat center center;
+}
+
+.main_banner .swiper-pagination-bullet {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.main_banner .swiper-pagination-bullet-active {
+    background-color: black;
+}
+
+.main_banner .navi {
+	position: absolute;
+	font-size: 30px;
+	top: calc(600px / 2 - 15px);
+	z-index: 10;
+	cursor: pointer;
+}
+
+.main_banner .navi.prev {
+	left: 10px;
+}
+
+.main_banner .navi.next {
+	right: 10px;
+}
+
+/* 메인 */
+main {
+    min-height: 2600px;
+}
+
+/* 메인이벤트 */
+.main_event {
+    height: 550px;
+}
+
+.main_event .swiper-slide {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    font-weight: 700;
+}
+
+.main_event .swiper-slide img {
+    margin-bottom: 40px;
+}
+
+.main_event .swiper-container {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* 메인메뉴 */
+.main_menu {
+    padding-top: 70px;
+}
+.main_menu .banner_menu {
+    margin-top: 100px;
+}
+.main_menu .banner_menu .banner {
+	float: left;
+	width: calc(100% / 3 - 10px);
+	margin-left: 5px;
+}
+
+.main_menu .banner_menu .banner:nth-child(1) {
+    margin-left: 0;
+}
+.main_menu .banner_menu::after {
+    clear: left;
+    content: '';
+    display: block;
+}
+
+.main_menu .banner_menu .banner img {
+    display: block;
+    width: 100%;
+}
+
+.main_menu .text1 {
+    color: #ff7c98;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+.main_menu .text2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* STORE&DELIVERY */
+.main_etc {
+    padding: 100px 0;
+}
+
+.main_menu .banner_menu {
+    margin-top: 100px;
+}
+.main_etc .banner_etc .banner {
+	float: left;
+	width: calc(100% / 2);
+}
+
+.main_etc .banner_etc .banner:nth-child(1) {
+    margin-left: 0;
+}
+.main_etc .banner_etc::after {
+    clear: left;
+    content: '';
+    display: block;
+}
+
+.main_etc .banner_etc .banner img {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* footer */
+footer {
+    margin-top: 10px;
+    min-height: 200px;
+    border-top: 1px solid #ff7c98;
+}
+
+footer .site_guide .site_map ul li {
+    float: left;
+    width: calc((100% / 7) - 21px);
+    margin: 30px 0;
+}
+
+footer .site_guide .site_map ul::after {
+    clear: left;
+    content: '';
+    display: block;
+}
+
+footer .info {
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: #969696;
+    padding-bottom: 50px;
+}
+
+footer .info img {
+    margin: 50px;
+}
