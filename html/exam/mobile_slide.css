@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 100px;
+    background-color: gray;
+}
+
+nav {
+    height: 55px;
+    background-color: orange;
+}
+
+section {
+    height: 2000px;
+    background-color: gray;
+}
+
+footer {
+    height: 100px;
+    background-color: blue;
+}
