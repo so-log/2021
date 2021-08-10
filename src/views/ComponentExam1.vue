@@ -1,12 +1,9 @@
 <template>
-    
+    <PageTitle />
 </template>
 <script>
+import PageTitle from '../components/PageTitle.vue';
 export default {
-    data() {
-        return {
-
-        };
-    }
+    components : {PageTitle},
 }
 </script>
