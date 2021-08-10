@@ -7,7 +7,7 @@ import Home from '../views/Home.vue'
 // import EventExam2 from '../views/EventExam2.vue'
 // import ComputedExam from '../views/ComputedExam.vue'
 // import WatchExam from '../views/WatchExam.vue'
-import ComponentExam1 from '../views/ComponentExam1.vue'
+import ComponentExam2 from '../views/ComponentExam2.vue'
 
 const routes = [
   {
@@ -26,7 +26,7 @@ const routes = [
   {
     path: '/school',
     name: 'school',
-    component: ComponentExam1,
+    component: ComponentExam2,
   }
 ]
 
