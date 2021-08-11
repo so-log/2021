@@ -249,6 +249,9 @@ button {
   display: block;
 }
 
+.br_main.on {
+  overflow: hidden;
+}
 /* 배너  */
 .banner img {
   width: 100%;
