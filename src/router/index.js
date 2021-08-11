@@ -1,6 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import School from '../views/School.vue'
+// import School2 from '../views/School2.vue'
+// import ListExam from '../views/ListExam.vue'
+// import IfExam from '../views/IfExam.vue'
+// import EventExam from '../views/EventExam.vue'
+// import EventExam2 from '../views/EventExam2.vue'
+// import ComputedExam from '../views/ComputedExam.vue'
+// import WatchExam from '../views/WatchExam.vue'
+// import ComponentExam2 from '../views/ComponentExam2.vue'
+import ComponentExam3 from '../views/ComponentExam3.vue'
+// import ComponentExam4 from '../views/ComponentExam4.vue'
 
 const routes = [
   {
@@ -17,9 +26,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path : "/school",
-    name : "school",
-    component : School
+    path: '/school',
+    name: 'school',
+    component: ComponentExam3,
   }
 ]
 

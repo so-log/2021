@@ -1,11 +1,12 @@
 <template>
-    <h1>{{ title }}</h1>
+    <h1>hello, {{ title }}</h1>
 </template>
+
 <script>
 export default {
     data() {
         return {
-            title : "제목..."
+            title: 'World'
         };
     }
 }
