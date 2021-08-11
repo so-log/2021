@@ -9,7 +9,7 @@ import Home from '../views/Home.vue'
 // import WatchExam from '../views/WatchExam.vue'
 // import ComponentExam2 from '../views/ComponentExam2.vue'
 // import ComponentExam3 from '../views/ComponentExam3.vue'
-import School from '../views/Watch.vue'
+import School from '../views/ComponentExam11.vue'
 
 const routes = [
   {
