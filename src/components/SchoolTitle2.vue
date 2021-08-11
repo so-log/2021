@@ -24,9 +24,11 @@ export default {
             type : Number,
             defult : 10,
         },
-    },methods : {
+    },
+    methods : {
         checkType() {
             console.log(typeof this.num);
+            console.log(this.num + 200);
         }
     }
 }
