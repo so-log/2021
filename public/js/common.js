@@ -25,3 +25,14 @@ const sideMenu = {
         });
     });
     
+    var swiper = new Swiper(".swiper-container mySwiper", {
+        pagination: {
+        el: ".swiper-pagination",
+        },
+        spaceBetween: 30,
+        loop:true,
+        autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,}
+    });
+    

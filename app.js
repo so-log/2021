@@ -2,19 +2,22 @@ const express = require('express');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const nunjucks = require('nunjucks');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 const path = require('path');
 const logger = require('./lib/logger');
-
+const bootStrap = require("./boot");
 
 // 라우터
 const indexRouter = require('./routes');
 const menuRouter = require('./routes/menu');
+const memberRouter = require('./routes/member');
 
 const app = express();
 
 dotenv.config();
 
-app.set('PORT', process.env.PORT || 3500);
+app.set('PORT', process.env.PORT || 3005);
 app.set("view engine", "html");
 nunjucks.configure(path.join(__dirname, 'views'), {
     express : app,
@@ -24,9 +27,25 @@ nunjucks.configure(path.join(__dirname, 'views'), {
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended : false }));
+app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(session({
+	resave : false,
+	saveUninitialized : true,
+	secret: process.env.COOKIE_SECRET,
+	cookie : {
+		httpOnly: true, 
+	},
+	name : "teamB-4",
+}));
+
+app.use(bootStrap);
+
 // 라우터 등록
 app.use(indexRouter);
 app.use(menuRouter);
+app.use(memberRouter);
 
 // 없는 페이지 라우터
 app.use((req, res, next) => {
