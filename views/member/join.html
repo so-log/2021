@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset='utf-8'>
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css3/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js3/baskin.js"></script>
+	<title>배스킨라빈스 회원가입</title>
+ </head>
+   <body>
+	<article id='wrap' class='br_login'>
+	 <header id='header'>
+        <div class='logo'>
+          <a href='http://localhost:3005/'><img src='/img/logo.png'></a> <!--메인 로고-->
+          <div class= 'site_top'>
+              <a href='http://localhost:3005/member/login'>LOGIN</a>
+              <a id='JOIN' href='http://localhost:3005/member/join'>JOIN</a> 
+              <button type="button" class="menu_button"></button> <!--누르면 사이드메뉴-->
+          </div>
+        </div>	
+      </header>
+	  <nav class="nav">
+        <div class="m_nav">
+          <section class="search_sec">
+            <ul>
+              <li class="search">
+                <a href="#">
+                  <img src="/img/btn_search.png" alt="search">
+                </a>
+              </li>
+            </ul>
+          </section>
+          <ul class="right_menu">
+            <li class="depth1 menu01">
+              <a href="#">%
+                <span>FLAVOR OF MONTH</span>%
+              </a>
+            </li>
+            <li class="depth1 menu02">
+              <a href="http://localhost:3005/menu">
+                <span>MENU</span>
+              </a>
+            </li>
+            <li class="depth1 menu03">
+              <a href="#">
+                <span>영양성분 및 알레르기</span>
+              </a>
+            </li>
+            <li class="depth1 menu04">
+              <a href="#">
+                <span>EVENT</span>
+              </a>
+            </li>
+            <li class="depth1 menu05">
+              <a href="#">
+                <span>STORE</span>
+              </a>
+            </li>
+            <li class="depth1 menu06">
+              <a href="#">
+                <span>ABOUT</span>
+              </a>
+            </li>
+          </ul>
+          <section class="menu_sns">
+            <a href="#">
+              <img src="/img/btn_facebook.png" alt="facebook">
+            </a>
+            <a href="#">
+              <img src="/img/btn_blog.png" alt="blog">
+            </a>
+            <a href="#">
+              <img src="/img/btn_twitter.png" alt="twitter">
+            </a>
+            <a href="#">
+              <img src="/img/btn_instagram.png" alt="instagram">
+            </a>
+          </section>
+        </div>
+        <button type="button"class="close_nav">
+          <span>메뉴닫기</span>
+        </button>
+        <div id="layer_dim" class="dim dim1"></div>
+      </nav>
+	<div id="content" class="sso_login_wrap">
+		<header class="content_header">		
+			<h3 class="line_title">
+				<div>
+				<div class='join_us'>회원가입</div>
+				<br>
+				</div>		 
+				배스킨라빈스 홈페이지에 오신 것을 환영합니다.
+			</h3>
+		</header>	
+		<div class="inner_content">
+			<div class="login_box">
+				<div class="cont_1">
+					<section class="form">
+						
+
+						<!-- 로그인 form -->
+	<div class="login_wrap">
+	<form method="post" name="submitFormIDPW" id="submitFormIDPW" action="/member/join">
+		<fieldset>
+			<input type="text" name="memId" id="loginid" placeholder="아이디를 입력하세요" title="아이디 입력">
+			<input type="password" name="memPw" id="loginpw" placeholder="비밀번호를 입력하세요" title="비밀번호 입력">
+			<input type="password" name="memPwRe" id="loginpwRe" placeholder="비밀번호를 다시한번 입력하세요." title="비밀번호 입력">
+			<input type="text" name="memNm" id="loginNm" placeholder="닉네임을 입력하세요" title="닉네임 입력">
+			<button type="submit" id="logbtn">회원가입</button>
+		</fieldset>
+	</form>
+	
+	<nav>
+		<ul>
+			<li class="li_1">
+				<a href="#">아이디 찾기</a>
+			</li>
+			<li class="li_2">
+				<a href="#">비밀번호 찾기</a>
+			</li>
+			<li class="li_3">
+				<a href="#">회원가입 이용약관</a>
+			</li>
+		</ul>
+		<p>*  타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로 정기적인 비밀번호 변경을 해주시길 바랍니다.</p>
+	</nav>
+</div>
+	<!-- footer -->
+	<footer id="footer">
+      <br><br>
+      <hr style='border: solid 0.01px orange; margin-bottom: 5%;'>
+      <nav class='footer_2'>
+        <ul >
+          <li>
+            <a href='#'>채용문의</a> <li>·</li>
+          </li>
+          <li>
+            <a href='#'>이용약관</a> <li>·</li>
+          </li>
+          <li>
+            <a href="#">윤리신고센터</a> <li>·</li>
+          </li>
+          <li>
+            <a href="#" id="pink">개인정보처리방침</a> <br> 
+          </li>
+          <li>
+            <a href="#">· 영상정보처리기기운영관리방침</a> <li>·</li>
+          </li>
+          <li>
+            <a href="#">거래희망회사 사전등록</a> 
+          </li>
+          <li></li>
+        </ul>
+      </nav>
+      <div class="brand_family">
+        <nav class="brand">
+          <ul>
+            <li class="li_1">
+              <a href="#"><img src="/img/btn_happypoint.png"><br>
+               <span>해피포인트</span>
+             </a>
+            </li>
+            <li class="li_2">
+              <a href="#"><img src="/img/btn_ccm.gif"><br>
+               <span>Consumer Centered Management</span>
+             </a>
+            </li>
+            <li class="li_3">
+              <a href="#"><img src="/img/btn_spc_story.png"><br>
+               <span>SPC 행복한 <br>이야기</span>
+              </a>
+            </li>
+            <li class="li_4">
+              <a href="#"><img src="/img/btn_norton.gif">
+               <span>Powered by Symantec</span>
+              </a>
+            </li>
+            <li class="li_5">
+              <a href="#"><img src="/img/btn_hm.png"><br>
+               <span>해피마켓</span>
+              </a>
+            </li>
+            <li class="li_6">
+              <a href="#"><img src="/img/btn_ksa.gif"><br>
+               <span>품질경쟁력 평가시스템</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>  
+      <section>
+        <div class="tel">
+          <a href="#"><button class="button_2">고객센터</button></a>
+          <a href="#"><img src="/img/call.gif" > 080-555-3131</a>
+        
+         <select name = 'family site' class="select">
+          <option value="FAMILY SITE">FAMILY SITE</option>
+          <option value="배스킨 스쿨">배스킨 스쿨</option>
+          <option value="SPC그룹사이트">SPC그룹사이트</option>
+          <option value="SPC MAGAZINE">SPC MAGAZINE</option>
+          <option value="BR코리아">BR코리아</option>
+          <option value="해피포인트카드">해피포인트카드</option>
+          <option value="파스쿠찌">파스쿠찌</option>
+          <option value="삼립">삼립</option>
+          <option value="파리바게트">파리바게트</option>
+          <option value="던킨도너츠">던킨도너츠</option>
+         </select> <br>
+        </div>
+         <nav class="footer_2">
+           <ul class="last_footer">
+             <li>
+               <a href="#">사업자 등록번호 : 303-81-09535</a> &nbsp;&nbsp;
+             </li>
+             <li>
+               <a href="#">비알코리아(주) 대표이사 도세호</a> <br>
+             </li>
+             <li>
+               <a href="#">서울특별시 서초구 남부순환로 2620</a> &nbsp;&nbsp;
+             </li>
+             <li>
+               <a href="#">개인정보관리책임자 : 김경우 </a>
+             </li>
+           </ul>
+         </nav>
+      </section>
+    </footer>
+	</article>
+   </body>
+</html>
