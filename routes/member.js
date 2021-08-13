@@ -4,6 +4,11 @@ const { alert, go } = require("../lib/common");
 const member = require("../models/member"); // member 모델 
 const router = express.Router();
 
+router.use((req, res, next) => {
+    res.locals.addCss = ["login"];
+    next();
+});
+
 router.route("/join")
 	.get((req, res) => {
 		 // 회원 가입 양식 
@@ -43,9 +48,6 @@ router.get("/logout", (req, res) => {
 	return res.redirect("/");
 });
 
-router.use((req, res, next) => {
-    res.locals.addCss = ["login"];
-    next();
-});
+
 
 module.exports = router;
