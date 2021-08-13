@@ -9,11 +9,10 @@ html {
 }
 
 header, footer {
-    letter-spacing: 1em;
     height: 100px;
 }
 
-body {
+.menu {
     padding: 0;
     margin: 0;
     letter-spacing: -0.5em;
@@ -81,7 +80,7 @@ ul {
     position: relative;
     float: left;
     width: 50%;
-    height: 270px;
+    height: 350px;
     margin-top: -1px;
     border: 1px solid #ebebeb;
     border-width: 1px 1px 1px 0px;

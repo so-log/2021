@@ -21,10 +21,8 @@ nunjucks.configure(path.join(__dirname, 'views'), {
     watch: true,
 });
 
-
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 // 라우터 등록
 app.use(indexRouter);
