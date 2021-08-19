@@ -5,6 +5,13 @@ const dotenv =require('dotenv');
 const cookieParser =require('cookie-parser');
 const nunjucks =require('nunjucks');
 const session =require('express-session');
+const logger = require('./lib/logger');
+
+// 라우터 등록
+const indexRouter = require('./routes');
+const boardRouter = require('./routes/board');
+
+
 const app = express();
 
 app.set('PORT', process.env.PORT || 3000);
@@ -28,6 +35,10 @@ app.use(session({
 }));
 
 
+// 라우터 등록
+app.use(indexRouter);
+app.use("/board", boardRouter);
+
 // 없는 페이지 처리 라우터
 app.use((req, res, next) => {
     const error = new Error(`${req.url}은 없는 페이지 입니다.`);
@@ -43,6 +54,14 @@ app.use((err, req, res, next) => {
         status : err.status || 500,
         stack : err.stack,
     };
+
+    // 로그 기록
+    logger(`[${data.status}]${data.message}`, 'error');
+	logger(data.stack, 'error');
+
+    if(process.env.NODE_ENV === 'production') {
+        delete data.stack;
+    }
     return res.send(err.status || 500).render('error', data);
 });
 
