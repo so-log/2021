@@ -8,6 +8,11 @@ const session =require('express-session');
 const app = express();
 
 app.set('PORT', process.env.PORT || 3000);
+app.set("view engine", "njk");
+nunjucks.configure(path.join(__dirname, "views"), {
+    express: app,
+    watch : true,
+});
 dotenv.config();
 
 app.use(morgan('dev'));
