@@ -27,20 +27,18 @@ app.use(session({
     name: "yhsessionid",
 }));
 
-app.get("/", (req, res, next) => {
-    const error = new Error('에러 발생!');
-    next(error);
-    // throw error;
-});
 
 // 없는 페이지 처리 라우터
 app.use((req, res, next) => {
+    const error = new Error(`${req.url}은 없는 페이지 입니다.`);
+    error.status = 404;
+    next(error);
     
 });
 
 // 오류 처리 라우터
 app.use((err, req, res, next) => {
-    return res.send(err.message);
+    return res.send(err.status || 500).render(err.message);
 });
 
 app.listen(app.get('PORT'), () => {
