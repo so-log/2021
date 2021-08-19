@@ -38,7 +38,12 @@ app.use((req, res, next) => {
 
 // 오류 처리 라우터
 app.use((err, req, res, next) => {
-    return res.send(err.status || 500).render(err.message);
+    const data = {
+        message : err.message,
+        status : err.status || 500,
+        stack : err.stack,
+    };
+    return res.send(err.status || 500).render('error', data);
 });
 
 app.listen(app.get('PORT'), () => {
