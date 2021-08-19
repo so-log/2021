@@ -8,12 +8,18 @@ const session =require('express-session');
 const app = express();
 
 app.set('PORT', process.env.PORT || 3000);
+dotenv.config();
 
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended : false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(session({
+    resave : false,
+    saveUninitialized: true,
+    
+}));
 
 app.get("/", (req, res, next) => {
     const error = new Error('에러 발생!');
