@@ -2,7 +2,7 @@ const app = require('express')();
 const bootStrap = require('./boot');
 const cookieParser = require('cookie-parser');
 
-app.use(bootStrap);
+// app.use(bootStrap);
 app.use((req, res , next) => {
     // 상단 라우터 .use
     // 공통, 공유 라우터 > 보조적인 역할 > 실제 처리는 해당하는 라우터 > next로 미들웨어 이동이 필요
@@ -12,14 +12,26 @@ app.use((req, res , next) => {
 
 // 미들웨어를 외부로 빼서 공통 라우터에 등록 > 기능 확장, 기능 추가
 
-app.get("/member" , (req, res, next) => {
-    return res.send("회원 페이지...");
+app.get("/member" ,bootStrap, (req, res, next) => {
+    // return res.send("회원 페이지...");
     // next();
+    const error = new Error("에러 발생!");
+    next(error);
 });
 
-app.use((req, res) => {
+app.use((req, res, next) => {
     // 없는 url은 가장 하단의 공통 라우터에 매칭 > 없는 페이지 처리 미들웨어
-    return res.send("없는 페이지 입니다.");
+    // return res.send("없는 페이지 입니다.");
+    const error = new Error(`${req.url}은 없는 페이지 입니다.`); // 404 - NOT FOUND
+    error.status = 404;
+    next(error);
+});
+
+app.use((err, req, res, next) => {
+    // 인수가 4개 > 오류 처리 미들웨어
+    return res.status(err.status || 500).send(err.message);
+    // throw 에러 객체;
+    // next(에러 객체);
 });
 
 /*
