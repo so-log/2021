@@ -9,7 +9,7 @@ public class Operator2 {
 		
 		for (int i = 1; i <= students.length; i++) {
 			int room = i % 10;	// 0-9번 방에 배정 
-			System.out.println(students[i-1] + "는 방번호" + room + "입니다.");
+			System.out.println(students[i - 1] + "는 방번호" + room + "입니다.");
 		}
 	}
 }
