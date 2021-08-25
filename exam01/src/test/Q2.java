@@ -1,8 +1,12 @@
 package test;
 
 public class Q2 {
-	int i
-	int room = 10;
-	
-	for(i)
+	public static void main(String() args) {
+		
+		for(i=0; i < 40; i++) {
+			if(i % 0) {
+				
+			}
+		}
+	}
 }
