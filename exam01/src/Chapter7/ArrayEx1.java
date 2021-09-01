@@ -1,15 +1,15 @@
-package Chapter7;
+package chapter7;
 
 public class ArrayEx1 {
 	public static void main(String[] args) {
-		int[] nums = new int[4];	// ºó ¸Þ¸ð¸® °ø°£¿¡ int ÀÚ·áÇü 4°³¸¦ »ý¼º > ÃÊ±â°ª 0
+		int[] nums = new int[4];	// ï¿½ï¿½ ï¿½Þ¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ int ï¿½Ú·ï¿½ï¿½ï¿½ 4ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ > ï¿½Ê±â°ª 0
 		/*
 		for(int i =0; i < nums.length; i++) {
 			System.out.println(nums[i]);
 		}
 		*/
 		
-		int[] nums2 = new int[] {10, 20, 30, 40};	// 4°³ °ø°£ »ý¼º, 4°³ °ª ´ëÀÔ
+		int[] nums2 = new int[] {10, 20, 30, 40};	// 4ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, 4ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		int[] nums3 = {10, 20, 30, 40};
 		/*
 		for (int i = 0; i < nums3.length; i++) {
@@ -18,13 +18,13 @@ public class ArrayEx1 {
 		*/
 		
 		/*
-		double[] nums4 = new double[4];	// double °ø°£ 4, ÃÊ±â°ª 0.0
+		double[] nums4 = new double[4];	// double ï¿½ï¿½ï¿½ï¿½ 4, ï¿½Ê±â°ª 0.0
 		for(int i = 0; i < nums4.length; i++) {
 			System.out.println(nums4[i]);
 		}
 		*/
 		
-		String[] text = new String[4];	// String°ø°£ 4, nullÀ¸·Î ÃÊ±âÈ­
+		String[] text = new String[4];	// Stringï¿½ï¿½ï¿½ï¿½ 4, nullï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
 		for(int i = 0; i < text.length; i++) {
 			System.out.println(text[i]);
 		}

@@ -1,10 +1,10 @@
-package Chapter6_1;
+package chapter6_1;
 
 public class Student {
-	static int serialNum;	// ÇÐ¹ø ÀÚµ¿ Áõ°¨
-	int studentID;	// ÀÎ½ºÅÏ½º »ý¼º ½ÃÁ¡ÀÇ ÇÐ¹ø ÀúÀå
+	static int serialNum;	// ï¿½Ð¹ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½
+	int studentID;	// ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¹ï¿½ ï¿½ï¿½ï¿½ï¿½
 	
-	public Student() {	// ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÒ ¶§ ¸¶´Ù ÇÐ¹ø serialNumÁõ°¨
+	public Student() {	// ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¹ï¿½ serialNumï¿½ï¿½ï¿½ï¿½
 		studentID = ++serialNum;
 	}
 	

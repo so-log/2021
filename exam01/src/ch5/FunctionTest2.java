@@ -1,21 +1,21 @@
 package ch5;
 
-public class P138 {
+public class FunctionTest2 {
 	public static void main(String[] args) {
 		int num1 = 10;
 		int num2 = 20;
 		
 		int result = addNum(num1, num2);
-		System.out.println(num1 + "+" + num2 + "=" + result + "�Դϴ�.");
+		System.out.println(num1 + "+" + num2 + "=" + result + "�Դϴ�.");
 		
 		result = substract(num1, num2);
-		System.out.println(num1 + " - " + num2 + " = " + result + "�Դϴ�");
+		System.out.println(num1 + " - " + num2 + " = " + result + "�Դϴ�");
 		
 		result = times(num1, num2);
-		System.out.println(num1 + " * " + num2 + " = " + result + "�Դϴ�");
+		System.out.println(num1 + " * " + num2 + " = " + result + "�Դϴ�");
 		
 		double value = divide(num1, num2);
-		System.out.println(num1 + " / " + num2 + " = " + value + "�Դϴ�");
+		System.out.println(num1 + " / " + num2 + " = " + value + "�Դϴ�");
 	}
 	
 	public static int addNum(int n1, int n2) {

@@ -1,9 +1,9 @@
-package Chapter7;
+package chapter7;
 
 public class ArrayEx2 {
 	public static void main(String[] args) {
-		// ¹è¿­ÀÇ °¹¼ö > ¿ä¼ÒÀÇ °¹¼öx, °ø°£ÀÇ °¹¼ö
-		double[] nums = new double[5];	// double°ø°£ 5°³ »ý¼º
+		// ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ > ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½x, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		double[] nums = new double[5];	// doubleï¿½ï¿½ï¿½ï¿½ 5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		int size = 0;
 		nums[0] = 10;
 		size++;

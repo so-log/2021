@@ -1,4 +1,4 @@
-package Chapter6;
+package chapter6;
 
 public class Bus {
 	int num; // 노선번호

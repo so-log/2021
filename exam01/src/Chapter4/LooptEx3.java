@@ -1,4 +1,4 @@
-package Chapter4;
+package chapter4;
 
 public class LooptEx3 {
 	public static void main(String[] args) {

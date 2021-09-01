@@ -1,9 +1,9 @@
-package Chapter7;
+package chapter7;
 
 public class ArrayEx3 {
 	public static void main(String[] args) {
-		char[] alpha = new char[26];	// 2byte¾¿ ÃÑ 52°³ÀÇ ¿¬¼Ó °ø°£ > ÀÎµ¦½º ¹øÈ£·Î Á¢±Ù
-		char ch = 'A';	// Á¤¼ö65
+		char[] alpha = new char[26];	// 2byteï¿½ï¿½ ï¿½ï¿½ 52ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ > ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		char ch = 'A';	// ï¿½ï¿½ï¿½ï¿½65
 		for(int i = 0; i < alpha.length; i++) {
 			alpha[i] = ch++;
 		}

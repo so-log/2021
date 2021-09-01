@@ -1,4 +1,4 @@
-package Chapter7;
+package chapter7;
 
 public class Student {
 	String name;
@@ -9,6 +9,6 @@ public class Student {
 		this.classRoom = classRoom;
 	}
 	public void showInfo() {
-		System.out.println(name + "╢б " + classRoom + "╧щ ют╢о╢ы.");
+		System.out.println(name + "О©╫О©╫ " + classRoom + "О©╫О©╫ О©╫т╢о╢О©╫.");
 	}
 }

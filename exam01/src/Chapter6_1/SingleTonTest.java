@@ -1,4 +1,4 @@
-package Chapter6_1;
+package chapter6_1;
 
 public class SingleTonTest {
 	public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class SingleTonTest {
 		SingleTon st1 = SingleTon.getInstance();
 		SingleTon st2 = SingleTon.getInstance();
 		
-		// st1, st2´Â µ¿ÀÏÇÑ ÀÎ½ºÅÏ½º, µ¿ÀÏÇÑ ÁÖ¼Ò
+		// st1, st2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½
 		System.out.println("st1 : " + st1);
 		System.out.println("st2 : " + st2);
 		

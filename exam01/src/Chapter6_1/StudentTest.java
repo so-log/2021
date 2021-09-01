@@ -1,15 +1,15 @@
-package Chapter6_1;
+package chapter6_1;
 
 public class StudentTest {
 	public static void main(String[] args) {
-		// ÇÐ»ý > »ý¼º > ÇÐ¹øÀÌ ÀÚµ¿ Áõ°¨(serialNum - static)
-		// ÇÐ¹øÀº ÀÚµ¿ Áõ°¡ÇÏ°í ¹ß±Þ > ¹ß±Þ µÈ ½ÃÁ¡ÀÇ ÇÐ¹øÀÌ °è¼Ó À¯Áö
+		// ï¿½Ð»ï¿½ > ï¿½ï¿½ï¿½ï¿½ > ï¿½Ð¹ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½(serialNum - static)
+		// ï¿½Ð¹ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ß±ï¿½ > ï¿½ß±ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		
 		Student st1 = new Student();
 		Student st2 = new Student();
 		Student st3 = new Student();
-		System.out.println("st1 ÇÐ¹ø = " + st1.getStudentID());
-		System.out.println("st2 ÇÐ¹ø = " + st2.getStudentID());
-		System.out.println("st3 ÇÐ¹ø = " + st3.getStudentID());
+		System.out.println("st1 ï¿½Ð¹ï¿½ = " + st1.getStudentID());
+		System.out.println("st2 ï¿½Ð¹ï¿½ = " + st2.getStudentID());
+		System.out.println("st3 ï¿½Ð¹ï¿½ = " + st3.getStudentID());
 	}
 }

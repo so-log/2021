@@ -1,14 +1,14 @@
-package Chapter7;
+package chapter7;
 
 public class StudentTest {
 	public static void main(String[] args) {
-		// ÀÚ·áÇü[] º¯¼ö¸í = new ÀÚ·áÇü[°¹¼ö];
-		// ÂüÁ¶ ÀÚ·áÇü - Student
-		Student[] list = new Student[100];	// instance°¡ »ý¼ºµÉ °ø°£¸¸ »ý¼º, ÃÊ±â°ª null
+		// ï¿½Ú·ï¿½ï¿½ï¿½[] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ = new ï¿½Ú·ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½];
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½ï¿½ï¿½ - Student
+		Student[] list = new Student[100];	// instanceï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½Ê±â°ª null
 		for(int i = 0; i < list.length; i++) {
 			int num = i + 1;
 			int ban = i % 4;
-			list[i] = new Student("ÀÌ¸§" + num, ban + 1);
+			list[i] = new Student("ï¿½Ì¸ï¿½" + num, ban + 1);
 		}
 		
 		for(int i = 0; i < list.length; i++) {

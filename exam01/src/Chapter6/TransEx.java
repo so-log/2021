@@ -1,4 +1,4 @@
-package Chapter6;
+package chapter6;
 
 public class TransEx {
 	public static void main(String[] args) {

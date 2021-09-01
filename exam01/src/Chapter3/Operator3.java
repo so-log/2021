@@ -1,4 +1,4 @@
-package Chapter3;
+package chapter3;
 
 public class Operator3 {
 	public static void main(String[] args) {

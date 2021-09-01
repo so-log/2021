@@ -1,4 +1,4 @@
-package Chapter6_1;
+package chapter6_1;
 
 public class SingleTon {
 	private static SingleTon instance =new SingleTon();
