@@ -15,6 +15,7 @@ public class MainController extends HttpServlet {
 		response.setContentType("text/html; charset=utf-8");
 		
 		SocialLogin naver = new NaverLogin();
+		
 		String naverCodeURL = naver.getCodeURL(request);
 		request.setAttribute("naverCodeURL", naverCodeURL);
 		

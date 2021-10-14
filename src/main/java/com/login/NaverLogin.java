@@ -52,7 +52,7 @@ public class NaverLogin extends SocialLogin {
 		
 		HttpSession session = request.getSession();
 		String _state = String.valueOf((Long)session.getAttribute("state"));
-		if(!state.equals(_state)) {
+		if (!_state.equals(state)) {
 			throw new Exception("데이터가 변조됐습니다.");
 		}
 		
@@ -62,13 +62,16 @@ public class NaverLogin extends SocialLogin {
 		sb.append("&client_id=");
 		sb.append(clientId);
 		sb.append("&client_secret=");
-		sb.append("clientSecret");
-		sb.append("&redirect_uri=");
-		sb.append(callbackUrl);
+		sb.append(clientSecret);
+		sb.append("&code=");
+		sb.append(code);
 		sb.append("&state=");
 		sb.append(state);
 		
-		return sb.toString();
+		String apiURL = sb.toString();
+		
+		
+		return null;
 		
 	}
 	
