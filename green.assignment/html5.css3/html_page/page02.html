@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문화가있는날</title>
+    <!-- 초기화 -->
+    <style>
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Helvetica', sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+        img { border : 0; }
+    </style>
+
+    <!-- 메뉴(1) -->
+    <style>
+        #header_lnb {
+            height: 50px;
+            line-height: 50px;
+            padding-left: 10px;
+            background: #111111;
+        }
+        #header_lnb > ul { overflow: hidden; }
+        #header_lnb > ul > li { 
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+    <!-- 메뉴(2) -->
+    <style>
+        /* 토글이미지 */
+        #header_lnb { position: relative; }
+        #header_lnb > label {
+            display: block;
+            height: 50px;
+            position: absolute;
+        }
+        /* @질문 이미지 연동 토글 */
+        #header_lnb > label.right {
+            width: 50px;
+            right: 10px; top: 3px;
+            background: url('menu.png');
+            text-indent: -9999999px;
+        }
+        /* 토글구현 */
+        #toggle { display: block; }
+        #toggle + #main_header > #wrap > #toggle_gnb { display: none; }
+        #toggle:checked + #main_header > #wrap > #toggle_gnb { display: block; }
+
+        /* 토글 목록 */
+        #toggle_gnb > ul { background-color: white; }
+        #toggle_gnb > ul > li {
+            width: 100px;
+        }
+    </style>
+    <!-- 부제(1) -->
+    <style>
+        #main_header { 
+            position: relative;
+            height: 300px;
+        }
+        #main_header > #title {
+            position: absolute;
+            display: block;
+            text-align: center;
+            height: 300px; 
+            width: 100%;
+            background: #799EBC;
+            
+        }
+        #title > h1 { margin-top: 180px; }
+    </style>
+    <!-- 부제(2) -->
+    <style>
+        /* @질문 버튼 위치,,,??? */
+        #title > #lnb > ul { 
+            overflow: hidden; 
+            margin-top: 20px;
+            margin-left: 40%;
+        }
+        #title > #lnb > ul > li { float: left; }
+    </style>
+    <!-- 소개 -->
+    <style>
+        #content { 
+            overflow: hidden;
+            position: relative;
+            height: 1900px ; 
+        } 
+        #content > h1 { 
+            text-align: center;
+            margin-top: 100px;
+        }
+        #content > img { margin-top: 40px; }
+        #sogae { 
+            float: right;
+            margin-right: 10px;
+            margin-top: 40px;
+            width: 700px;
+            height: 500px;
+            
+            background: gainsboro;
+        }
+        #letter > h3 { 
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px; }
+        #letter {
+            line-height: 40px;
+            height: 40px;
+            padding: 20px;
+        }
+    </style>
+    <!-- 표 -->
+    <style>
+        #table { 
+            display: table;
+            position: absolute;
+            left: 300px;
+            margin-top: 100px;
+        }
+        #table > div.tab  { display: table-cell; }
+        #table > div.tab > ul {
+            width: 300px;
+            height: 200px;
+            box-sizing: border-box;
+            border: 1px solid gainsboro;
+
+            text-align: center;
+        }
+        /* @질문 글씨 가운데 버튼 위치 */
+    </style>
+    <!-- 영상 -->
+    <style>
+        #vidio {
+            position: absolute;
+            left: 70px;
+            margin-top: 400px;
+            
+        }
+    </style>
+    <!-- 푸터 -->
+    <style>
+        footer {
+            height: 80px;
+
+            background: #111111;
+            color: white;
+
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input id="toggle" type="checkbox" />
+    <header id="main_header">
+        <nav id="header_lnb">
+            <ul>
+                <li><a href="#">진흥원소개</a></li>
+                <li><a href="#">생활문화축제</a></li>
+            </ul>
+            <label class="right" for="toggle">toggle</label>
+        </nav>
+        <div id="wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">문화가있는날</a></li>
+                    <li><a href="#">프로그램</a></li>
+                    <li><a href="#">기획사업</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav id="title">
+            <h1>문화가 있는 날이란</h1>
+            <div id="lnb">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <button type="button"> > </button>
+                    <li>
+                        <select id="first">
+                            <option selected>문화가 있는 날</option>
+                            <option>프로그램</option>
+                            <option>기획사업</option>
+                            <option>커뮤니티</option>
+                            <option>이벤트</option>
+                        </select>
+                    </li>
+                    <button type="button"> > </button>
+                    <li>
+                        <select id="secend">
+                            <option selected>문화가 있는 날이란</option>
+                            <option>파트너로 참여하기</option>
+                            <option>기업협력</option>
+                            <option>로고</option>
+                        </select>
+                    </li>
+                    <button type="button"> > </button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="content">
+        <h1>문화가 있는 날이란</h1>
+        <img src="sog.png" width="700px" height="500px" />
+        <section id="sogae">
+            <div id="letter">
+                <h3>문화가 있는 날이란</h3>
+                <p>문화가 있는 날은 국민이 일상에서 문화를 쉽게 접할 수 있도록 매달 마지막 수요일(해당 주간 포함)에 다양한 문화혜택을 제공하는 날입니다. 문화가 있는 날에는 영화관, 공연장, 박물관, 미술관, 문화재 등 전국의 2천여 개 문화시설을 할인 또는 무료로 즐길 수 있습니다.</p>
+                <p>또한 지역문화 콘텐츠 특성화, 청춘마이크, 동동동 문화놀이터, 직장 문화배달 등 다양한 기획 사업을 통해 민간단체와 협력하고 국민 문화 향유권 확대를 위해 노력하고 있습니다.</p>
+                <p>'문화가 있는 날'에 참여하는 영화관, 스포츠시설, 공연장, 미술관, 박물관, 문화재, 도서관에서 할인 또는 무료입장이 가능합니다. 더불어 직장인도 퇴근 후 이용이 가능하도록 일부 문화시설은 야간개방을 합니다.</p>
+            </div>
+        </section>
+        <section id="table">
+            <div id="movie" class="tab">
+                <ul>
+                    <li>전국 주요 영화관 할인</li>
+                    <li>CGV·롯데시네마·메가박스 등</li>
+                    <li>오후5시~9시, 5,000원</li>
+                </ul>
+                <button type="button">-></button>
+            </div>
+            <div id="book" class="tab">
+                <ul>
+                    <li>도서대출권수 확대</li>
+                    <li>특별프로그램 운영</li>
+                </ul>
+                <button type="button">-></button>
+            </div>
+            <div id="sport" class="tab">
+                <ul>
+                    <li>프로스포츠 할인 및 특별 이벤트</li>
+                    <button type="button">-></button>
+                </ul>
+            </div>
+        </section>
+        <section id="vidio">
+            <img src="https://via.placeholder.com/1280x720.png" />
+        </section>
+    </div>
+    <footer>
+        <h3>개인정보처리방침</h3><br />
+        <p>문의 : 02-2623-3100 (09:00~18:00)점심시간 12:00~13:00 제외 ⓒ 지역문화진흥원 ALL RIGHTS RESERVED</p>
+    </footer>
+</body>
+</html>
