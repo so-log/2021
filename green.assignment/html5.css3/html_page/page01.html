@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문화가있는날</title>
+    <!-- 초기화 -->
+    <style>
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Helvetica', sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+        img { border : 0; }
+    </style>
+
+    <!-- 메뉴(1) -->
+    <style>
+        #header_lnb {
+            height: 50px;
+            line-height: 50px;
+            padding-left: 10px;
+            background: #111111;
+        }
+        #header_lnb > ul { overflow: hidden; }
+        #header_lnb > ul > li { 
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+    <!-- 메뉴(2) -->
+    <style>
+        /* 토글이미지 */
+        #header_lnb { position: relative; }
+        #header_lnb > label {
+            display: block;
+            height: 50px;
+            position: absolute;
+        }
+        /* @질문 이미지 연동 토글 */
+        #header_lnb > label.right {
+            width: 50px;
+            right: 10px; top: 3px;
+            background: url('menu.png');
+            text-indent: -9999999px;
+        }
+        /* 토글구현 */
+        #toggle { display: block; }
+        #toggle + #main_header > #wrap > #toggle_gnb { display: none; }
+        #toggle:checked + #main_header > #wrap > #toggle_gnb { display: block; }
+
+        /* 토글 목록 */
+        #toggle_gnb > ul { background-color: white; }
+        #toggle_gnb > ul > li {
+            width: 100px;
+        }
+    </style>
+    <!-- wrap -->
+    <style>
+        #wrap { 
+            height: 500px;
+            background: url('wrap.jpeg'); }
+    </style>
+    <!-- 검색창 -->
+    <style>
+        #wrap { position: relative; }
+        h2 { 
+            position: absolute;
+            left: 500px;
+            display: block;
+            margin-top: 300px;
+
+            text-decoration-line: overline;
+        }
+        #search { 
+            position: absolute;
+            height: 500px;
+            margin-top: 250px;
+            margin-left: 530px;
+            display: table ;
+            }
+        div.sear { display: table-cell; }
+    </style>
+    <!-- 포스터 -->
+    <style>
+        #content { 
+            position: relative;
+            height: 1100px;
+    }
+        #content > #poster { padding: 30px;}
+        #content > #poster > ul { display: table; }
+        #content > #poster > ul > li { display: table-cell;}
+    </style>
+    <!-- 투어 -->
+    <style>
+        #content > #tour { padding: 30px;}
+        #content > #tour > ul { display: table; }
+        #content > #tour > ul > li { display: table-cell;}
+    </style>
+    <!-- 기업 -->
+    <style>
+        #content > #col { padding: 30px; }
+        #col > img { margin-left: 250px;}
+    </style>
+    <!-- 푸터 -->
+    <style>
+        footer {
+            height: 80px;
+
+            background: #111111;
+            color: white;
+
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input id="toggle" type="checkbox" />
+    <header id="main_header">
+        <nav id="header_lnb">
+            <ul>
+                <li><a href="#">진흥원소개</a></li>
+                <li><a href="#">생활문화축제</a></li>
+            </ul>
+            <label class="right" for="toggle">toggle</label>
+        </nav>
+        <div id="wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">문화가있는날</a></li>
+                    <li><a href="#">프로그램</a></li>
+                    <li><a href="#">기획사업</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+            </div>
+            <h2>가장 가까운 곳에 있는 행복을 찾아보세요</h2>
+            <div id="search">
+                <div id="first" class="sear">
+                    <select id="do">
+                        <option selected>시/도</option>
+                        <option>서울특별시</option>
+                        <option>부산광역시</option>
+                        <option>대구광역시</option>
+                        <option>인천광역시</option>
+                        <option>광주광역시</option>
+                        <option>대전광역시</option>
+                        <option>울산광역시</option>
+                        <option>경기도</option>
+                        <option>강원도</option>
+                        <option>충청도</option>
+                        <option>전라도</option>
+                        <option>경상도</option>
+                        <option>제주특별자치도</option>
+                    </select>
+                </div>
+                <div id="secend" class="sear">
+                    <select id="do">
+                        <option selected>구/군</option>
+                    </select>
+                </div>
+                <div id="third" class="sear">
+                    <input id="searchblock" placeholder="검색어를 입력하세요" type="text" />
+                </div>
+                <button type="button">현위치</button>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <section id="poster">
+            <h1>한 달을 즐겁게 만드는 하루, 문화가 있는 날!</h1>
+            <ul>
+                <li><img src="https://via.placeholder.com/270x338.png" /></li>
+                <li><img src="https://via.placeholder.com/270x338.png" /></li>
+                <li><img src="https://via.placeholder.com/270x338.png" /></li>
+                <li><img src="https://via.placeholder.com/270x338.png" /></li>
+                <li><img src="https://via.placeholder.com/270x338.png" /></li>
+            </ul>
+        </section>
+        <section id="tour">
+            <h1>청춘마이크, 랜선 버스킹 투어</h1>
+            <ul>
+                <li><img src="https://via.placeholder.com/270x338.png" /></li>
+                <li><img src="https://via.placeholder.com/270x338.png" /></li>
+                <li><img src="https://via.placeholder.com/270x338.png" /></li>
+                <li><img src="https://via.placeholder.com/270x338.png" /></li>
+                <li><img src="https://via.placeholder.com/270x338.png" /></li>
+            </ul>
+        </section>
+        <section id="col">
+            <h1>문화가 있는 날과 함께합니다.</h1>
+            <img src="col.png" width="800px" />
+        </section>
+    </div>
+    <footer>
+        <h3>개인정보처리방침</h3><br />
+        <p>문의 : 02-2623-3100 (09:00~18:00)점심시간 12:00~13:00 제외 ⓒ 지역문화진흥원 ALL RIGHTS RESERVED</p>
+    </footer>
+</body>
+</html>

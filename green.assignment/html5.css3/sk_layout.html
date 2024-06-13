@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 초기화 -->
+    <style>
+        * { margin: 0; padding: 0; }
+        body { font-family: sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+        img { border: 0; }
+    </style>
+    <!-- 헤더 -->
+    <style>
+        #main_header {
+            width: 960;
+            margin: 0 auto;
+            height: 250px;
+            position: relative;
+        }
+        #main_header > #title {
+            position: absolute;
+            left: 0 ; top: 30px;
+        }
+        #main_header > #main_gnb {
+            position: absolute;
+            left: 800px; top: 30px;
+        }
+        #main_header > #dolpin {
+            position: absolute;
+            left: 0; top: 100px;
+            width: 2100px;
+            margin: 0 auto;
+            border: 1px solid blue; }
+    </style>
+    <!-- 메뉴 -->
+    <style>
+        #main_gnb > ul { overflow: hidden; }
+        #main_gnb > ul > li { float: left; }
+        #main_gnb > ul > li > a {
+            display: block;
+            padding: 2px 10px;
+        }
+        #main_gnb > ul > li > a:hover { background: white; color: red; }
+    </style>
+    <!-- 메인메뉴 -->
+    <style>
+        #menu_sub > .gateway {
+            margin-left: 50px;
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+    </style>
+    <!-- 기사 -->
+    <style>
+        #article > #first > .highlight {
+            margin-left: 50px;
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+        #article > #secend > .highlight {
+            margin-left: 50px;
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+        </style>
+    <!-- 푸터 -->
+    <style>
+        footer { margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1>SK</h1>
+        </div>
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">SK소개</a></li>
+                <li><a href="#">MEDIA센터</a></li>
+                <li><a href="#">사회적 가치</a></li>
+                <li><a href="#">채용</a></li>
+            </ul>
+        </nav>
+        <div id="dolpin">
+            <h1>선한 영향력</h1>
+            <P>=플라스틱으로부터 바다를 지키는 능력</P>
+            <P>우리 모두를 생각하는 '선한 영향력'이 더 큰 영향력이 되도록 SK도 노력하겠습니다</P>
+            <P>모두가 함께,행복하도록</P>
+        </div>
+    </header>
+    <div id="content">
+        <section id="menu_sub">
+            <h1>SK GATEWAY</h1>
+            <div class="gateway">
+                <h1>SK뉴스 바로가기</h1>
+                <p>SK의 다양한 소식을 전합니다</p>
+            </div>
+            <div class="gateway">
+                <h1>계열사 바로가기</h1>
+                <p>따로 또 같이 우리는 SK입니다</p>
+            </div>            
+            <div class="gateway">
+                <h1>채용 바로가기</h1>
+                <p>사람이 자원인 나라 그 사람을 키우는 SK</p>
+            </div>
+        </section>
+        <section id="article">
+            <h1>SK HIGHLIGHT</h1>
+            <div id="first">
+                <div class="highlight">
+                    <h1>[sk뉴스]sk(주), 세계 최초 청록수소 생산 회사 투자</h1>
+                </div>
+                <div class="highlight">
+                    <h1>[SK뉴스]sk그룹 비즈혁신 방향, 써니에 담았다</h1>
+                </div>
+            </div>
+            <div id="secend">
+                <div class="highlight">
+                    <h1>[media sk]수소생태계 구축을 위한 sk의 노력</h1>
+                </div>
+                <div class="highlight">
+                    <h1>[sk채널]스케치북 위에서 살펴보는 '한기 나눔 온택트 프로젝트'이야기!</h1>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <P>서울특별시 종로구 종로 26 COPYRIGHT (c) BY SK INC. ALL RIGHT RESERVED.</P>
+    </footer>
+</body>
+</html>
